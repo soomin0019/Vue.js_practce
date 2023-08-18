@@ -22,9 +22,14 @@
 
     </form>
     {{ todos }}
-    <div class="card">
+    <div class="card mt-2">
       <div class="card-body p-2">
-        {{ todos[0] }}
+        {{ todos[0].subject }}
+      </div>
+    </div>
+    <div class="card mt-2">
+      <div class="card-body p-2">
+        {{ todos[1].subject }}
       </div>
     </div>
   </div>
@@ -36,8 +41,8 @@ export default {
   setup() {
     const todo = ref('');
     const todos = ref([
-      {id : 1, subject: 'ÈÞ´ëÆù »ç±â'},
-      {id : 2, subject: 'Àåº¸±â'}
+      {id : 1, subject: 'íœ´ëŒ€í° ì‚¬ê¸°'},
+      {id : 2, subject: 'ìž¥ë³´ê¸°'}
     ]);
     
     const onSubmit = () => {
